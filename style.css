@@ -1,0 +1,137 @@
+* {
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+body {
+    background-color: #003f5f;
+}
+
+#bgvideo {
+    position: fixed;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100;
+    background-size: cover;
+}
+
+.container {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.envases-container {
+    width: 50%;
+    position: relative;
+}
+
+.img-container {
+    width: 50%;
+    /* padding: 120px 100px 0 200px; */
+    /* margin: 0 0 0 -1000px; */
+    transition-property: left;
+    transition-duration: 800ms;
+    transition-timing-function: ease-out;
+    position: absolute;
+    left: -3000px;
+}
+
+.responsive {
+    width: 100%;
+    height: auto;
+}
+
+.stick {
+    position: sticky;
+    top: 100px;
+}
+
+.title-container {
+    margin: 120px 50px 0 0;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    justify-content: end;
+    align-items: flex-end;
+    position: relative;
+    top: -1000px;
+    animation-name: entran-titulos;
+    animation-delay: 1000ms;
+    animation-duration: 1200ms;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+}
+
+.title-item {
+    line-height: 1;
+    margin: 0 0 2rem 0;
+    width: fit-content;
+    transition-duration: 300ms;
+    transition-property: transform;
+}
+.title-item:hover {
+    transform: scale(1.15);
+}
+
+.title-item > h1 {
+    font-style: italic;
+    color: white;
+    font-size: 4rem;
+    text-align: right;
+    text-shadow: 1px 1px 10px black;
+}
+
+.title-item > h2 {
+    font-style: italic;
+    color: #febe11;
+    text-align: right;
+    text-shadow: 1px 1px 5px black;
+}
+
+.logo-card {
+    position: fixed;
+    bottom: 20px;
+    left: 60px;
+    width: 15%;
+    min-width: 210.56px;
+    z-index: 100;
+
+    animation-name: aparece-logo-card;
+    animation-duration: 1000ms;
+    animation-timing-function: ease-in-out;
+}
+
+.logo-card > p {
+    color: white;
+    margin: -40px auto 0 auto;
+    font-style: italic;
+    width: fit-content;
+}
+
+@keyframes aparece-logo-card {
+    0% {
+        left: -900px;
+    }
+    100% {
+        left: 60px;
+    }
+}
+
+@keyframes entran-titulos {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        top: 0;
+        opacity: 1;
+    }
+}
